@@ -202,6 +202,8 @@ a:focus {
     html {
         font-size: 20px;
         line-height: 1.6;
+        padding-left: 48px;
+        padding-right: 48px;
     }
     .o-row {
         padding-left: 48px;
@@ -212,6 +214,10 @@ a:focus {
         padding-top: 72px;
         padding-bottom: 48px;
     }
+    .o-row--md{
+        padding-top: 48px;
+        padding-bottom: 24px; ;
+    }
 }
 
 /*
@@ -219,6 +225,26 @@ a:focus {
     ---
     Creates a horizontal container that sets de global max-width
 */
+.o-section {
+    display: flow-root;
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
 
 .o-container {
     margin-left: auto;
@@ -450,7 +476,9 @@ a:focus {
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
-
+.u-pt-clear{
+    padding-top:0 !important
+}
 /*
     Utilities: max-width
     ---
