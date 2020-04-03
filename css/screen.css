@@ -2,25 +2,24 @@
   #FONTS
 \*------------------------------------*/
 
-@font-face {
-    font-family: "HK Grotesk Web";
-    font-weight: 200;
-    src: ("../fonts/hkgrotesk-light-webfont.woff2") format("woff2");
-    src: ("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+@font-face{
+    font-family:"HK Grotesk Web";
+    font-weight:200;
+    src:url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
 }
 
-@font-face {
-    font-family: "HK Grotesk Web";
-    font-weight: 400;
-    src: ("../fonts/hkgrotesk-light-webfont.woff2") format("woff2");
-    src: ("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+@font-face{
+    font-family:"HK Grotesk Web";
+    font-weight:400;
+    src:url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
 }
-
-@font-face {
-    font-family: "HK Grotesk Web";
-    font-weight: 600;
-    src: ("../fonts/hkgrotesk-light-webfont.woff2") format("woff2");
-    src: ("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+@font-face{
+    font-family:"HK Grotesk Web";
+    font-weight:500;
+    src:url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+        url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
 }
 /*------------------------------------*\
   #GENERIC
@@ -553,7 +552,68 @@ a:focus {
     transform: scaleX(1);
     background-color: #3E3EA8;
 }
+.c-footer {
+    font-size:18px;
+    line-height:24px;
+    position: relative;
+}
 
+.c-footer__logo {
+    /* background:green; */
+
+}
+
+.c-footer__nav {
+    /* background:blue; */
+}
+
+@media (min-width: 768px) {
+    .c-logo{
+        height:40px;
+    }
+    .c-footer {
+    }
+
+    .c-footer__logo {
+        display:flex;
+        justify-content: center;
+
+    }
+
+    .c-footer__nav {
+        display:flex;
+        justify-content: center;
+
+        /* margin:0 auto; */
+        /* align-content:space-round */
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+    }
+
+    .c-footer__logo {
+        /* position: absolute;
+        width:100%;
+        top:40px;
+        left:-40px;
+       */
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+
+    .c-footer__logo .c-logo {
+        
+    }
+
+    .c-footer__nav {
+       
+        justify-content: space-between;
+    }
+}
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
