@@ -384,6 +384,13 @@ a:focus {
     list-style: none;
     padding: 0;
 }
+.o-row--gradient {
+    position: relative;
+    padding: 24px 24px 0;
+    display: flow-root;
+    color:white;
+    background:linear-gradient(to top, #5051DB 0%,#3887F7 100%); 
+}
 
 /*------------------------------------*\
   #COMPONENTS
@@ -514,9 +521,14 @@ a:focus {
 .c-link-cta,
 .c-link-cta:visited,
 .c-link-cta:active {
-    color: #7373F5;
+    color: #fff;
 }
-
+.c-link-cta--inverse::after{
+    background-color:#fff
+}
+.c-link-cta--inverse::after::hover{
+    background-color:#fff
+}
 .c-link-cta::after {
     content: "";
     display: block;
